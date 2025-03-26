@@ -4,23 +4,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../../styles/Details.module.css';
-
-interface Item {
-  id: string;
-  title: string;
-  description: string;
-  logo?: string;
-  website?: string;
-  longDescription?: string[];
-  pros?: string[];
-  cons?: string[];
-  useCases?: string[];
-  pricing?: string;
-  easeOfUse?: string;
-  aicdContributor?: string;
-  aicdContributorLink?: string;
-  type?: string;
-}
+import type { Item } from '@/types';
 
 interface Category {
   id: string;
@@ -82,7 +66,7 @@ export default function ItemDetails() {
       let foundItem: Item | null = null;
       for (const section of data.sections) {
         for (const category of section.categories) {
-          const match = category.items.find(item => item.id === id);
+          const match = category.items.find((item: Item) => item.id === id);
           if (match) {
             foundItem = match;
             break;

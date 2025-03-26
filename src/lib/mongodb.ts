@@ -1,8 +1,9 @@
 import { MongoClient, Db, MongoClientOptions } from 'mongodb';
+import { env } from './env';
 
 // ------------ CONNECTION CONFIG ------------
 // Default URI with fallback for development
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://aicdadmin:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority';
+const MONGODB_URI = env.MONGODB_URI || 'mongodb+srv://aicdadmin:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority';
 
 // Database name to use
 const DB_NAME = 'aicd';
@@ -328,4 +329,35 @@ export async function verifyDatabaseAccess(): Promise<boolean> {
 }
 
 // Export the connection function
-export default connectDB; 
+export default connectDB;
+
+// Initialize admin credentials if they don't exist
+async function initializeAdmin() {
+  try {
+    const db = await connectDB();
+    const adminCollection = db.collection('admins');
+    
+    // Check if admin exists
+    const admin = await adminCollection.findOne({ username: 'admin' });
+    
+    if (!admin) {
+      // Create default admin if none exists
+      await adminCollection.insertOne({
+        username: 'admin',
+        password: 'admin678', // In production, this should be hashed
+        role: 'admin',
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+    }
+  } catch (error) {
+    console.error('Error initializing admin:', error);
+  }
+}
+
+// Initialize admin on connection
+connectDB().then(initializeAdmin);
+
+// Export a module-scoped MongoClient promise. By doing this in a
+// separate module, the client can be shared across functions.
+export { connectDB }; 

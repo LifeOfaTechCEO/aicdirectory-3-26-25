@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { verify } from 'jsonwebtoken';
-import { env } from '../../lib/env';
-import type { AdminJwtPayload } from '../../../types/auth';
+import { env } from '@/lib/env';
+import type { AdminJwtPayload } from '@/types/auth';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {

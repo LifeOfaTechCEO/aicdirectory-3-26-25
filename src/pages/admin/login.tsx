@@ -6,27 +6,20 @@ export default function Login() {
   const router = useRouter();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     // Check if already logged in
-    const checkAuth = async () => {
-      try {
-        const response = await fetch('/api/auth/check');
-        if (response.ok) {
-          router.push('/admin');
-        }
-      } catch (error) {
-        console.error('Auth check failed:', error);
-      }
-    };
-    checkAuth();
+    const token = sessionStorage.getItem('adminToken');
+    if (token) {
+      router.push('/admin');
+    }
   }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setError('');
+    setError(null);
     setLoading(true);
 
     try {
@@ -40,24 +33,25 @@ export default function Login() {
 
       const data = await response.json();
 
-      if (response.ok) {
-        router.push('/admin');
-      } else {
-        setError(data.error || 'Login failed');
+      if (!response.ok) {
+        throw new Error(data.message || 'Login failed');
       }
-    } catch (error) {
+
+      // Store token in session storage instead of localStorage
+      sessionStorage.setItem('adminToken', data.token);
+      router.push('/admin');
+    } catch (error: any) {
       console.error('Login error:', error);
-      setError('An error occurred during login');
+      setError(error.message || 'Failed to login');
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
       <Head>
         <title>Admin Login - AI Directory</title>
-        <meta name="description" content="Admin login for AI Directory" />
       </Head>
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
@@ -104,8 +98,12 @@ export default function Login() {
             </div>
 
             {error && (
-              <div className="text-red-600 text-sm">
-                {error}
+              <div className="rounded-md bg-red-50 p-4">
+                <div className="flex">
+                  <div className="ml-3">
+                    <h3 className="text-sm font-medium text-red-800">{error}</h3>
+                  </div>
+                </div>
               </div>
             )}
 
@@ -115,7 +113,7 @@ export default function Login() {
                 disabled={loading}
                 className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50"
               >
-                {loading ? 'Signing in...' : 'Sign in'}
+                {loading ? 'Logging in...' : 'Login'}
               </button>
             </div>
           </form>

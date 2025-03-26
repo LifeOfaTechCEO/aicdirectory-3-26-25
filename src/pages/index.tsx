@@ -52,7 +52,7 @@ export default function Home() {
         try {
           response = await fetchPromise;
           clearTimeout(timeoutId);
-        } catch (fetchError) {
+        } catch (fetchError: any) {
           if (fetchError.name === 'AbortError') {
             console.error(`[Frontend-${requestId}] Fetch timed out after 10 seconds`);
             throw new Error('Request timed out. Please try again.');
@@ -171,7 +171,7 @@ export default function Home() {
         setSectionsData(sectionsArray);
         setApiStatus('success');
 
-      } catch (err) {
+      } catch (err: any) {
         const errorMessage = err instanceof Error ? err.message : 'Unknown error occurred';
         console.error(`[Frontend-${requestId}] Error fetching data:`, {
           error: errorMessage,
@@ -485,7 +485,7 @@ export default function Home() {
                 {renderContent()}
               </>
             )}
-          </div>
+            </div>
         ) : (
           renderContent()
         )}

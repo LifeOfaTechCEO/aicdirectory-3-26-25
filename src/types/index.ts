@@ -15,18 +15,26 @@ export interface Item {
   aicdContributorLink?: string;
 }
 
+export interface Product {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  icon?: string;
+}
+
 export interface Category {
   id: string;
   title: string;
-  count: number;
+  description: string;
   icon: string;
   items: Item[];
-  defaultPros?: string[];
-  defaultCons?: string[];
+  products: Product[];
 }
 
 export interface Section {
   id: string;
   title: string;
+  description: string;
   categories: Category[];
 } 
