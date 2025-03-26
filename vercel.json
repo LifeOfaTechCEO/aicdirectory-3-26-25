@@ -25,7 +25,8 @@
   ],
   "github": {
     "enabled": true,
-    "silent": true
+    "silent": true,
+    "autoAlias": true
   },
   "ignoreCommand": "echo 'Ignoring TypeScript files that cause problems' && find ./new-website -name '*.ts' -delete || true"
 } 
