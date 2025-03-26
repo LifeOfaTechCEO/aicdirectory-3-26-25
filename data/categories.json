@@ -1,0 +1,434 @@
+{
+  "sections": [
+    {
+      "id": "section-1741754398932",
+      "title": "Artificial Intelligence",
+      "categories": [
+        {
+          "id": "category-1741754450976",
+          "title": "New Category",
+          "count": 0,
+          "icon": "📁",
+          "items": [
+            {
+              "id": "item-1741754453078",
+              "title": "New Item 1",
+              "description": "short",
+              "type": "tool",
+              "longDescription": [
+                "long"
+              ],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [
+                "1 use case"
+              ],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "1.com",
+              "logo": "/uploads/1741755653635-image.png"
+            },
+            {
+              "id": "item-1741755171167",
+              "title": "New Item 2",
+              "description": "short ",
+              "type": "tool",
+              "longDescription": [
+                "long"
+              ],
+              "pros": [
+                "Share your pros/cons with us.",
+                "2"
+              ],
+              "cons": [
+                "Share your pros/cons with us.",
+                "2"
+              ],
+              "useCases": [
+                "1",
+                "2"
+              ],
+              "pricing": "Paid",
+              "easeOfUse": "Intermediate",
+              "website": "2.com",
+              "logo": "/uploads/1741755839309-4483a301-85d0-4f0c-aa62-6da85fc650cc.webp"
+            },
+            {
+              "id": "item-1741755179706",
+              "title": "New Item 3",
+              "description": "short 3",
+              "type": "tool",
+              "longDescription": [
+                "long 3"
+              ],
+              "pros": [
+                "Share your pros/cons with us.",
+                "2",
+                "3"
+              ],
+              "cons": [
+                "Share your pros/cons with us.",
+                "2",
+                "3"
+              ],
+              "useCases": [
+                "1",
+                "2",
+                "3"
+              ],
+              "pricing": "Freemium",
+              "easeOfUse": "Advanced",
+              "website": "3.com",
+              "logo": "/uploads/1741755973249-DALL_E_2025-01-16_16.49.04_-_A_vibrant_YouTube_banner_design_featuring_a_neon-style_theme._The_text__DEGEN_DADDY__is_prominently_displayed_in_glowing_blue_and_pink_neon_letters__w.webp"
+            },
+            {
+              "id": "item-1741755194919",
+              "title": "New Item 4",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Subscription",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "aol.com"
+            },
+            {
+              "id": "item-1741755426969",
+              "title": "New Item 5",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "aol.com"
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1742476086286",
+          "title": "New Category 44",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741725989386",
+      "title": "New Section 3",
+      "categories": []
+    },
+    {
+      "id": "section-1741725004393",
+      "title": "New Section 5",
+      "categories": [
+        {
+          "id": "category-1741726008333",
+          "title": "Category 2",
+          "count": 0,
+          "icon": "🤖",
+          "items": [
+            {
+              "id": "item-1741726015546",
+              "title": "Title 1 test",
+              "description": "short test",
+              "type": "tool",
+              "longDescription": [
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tionlong descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tionlong descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tionlong descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tionlong descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tionlong descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion",
+                "",
+                "long descri[tion"
+              ],
+              "pros": [
+                "pros 1",
+                "pros 2"
+              ],
+              "cons": [
+                "cons 1",
+                "cons 2"
+              ],
+              "useCases": [
+                "use case 1",
+                "use case 2",
+                "use case 3",
+                "use case 4",
+                "use case 5",
+                "use case 6",
+                "7",
+                "8",
+                "use case 9"
+              ],
+              "website": "aol.com",
+              "logo": "/uploads/1741749392720-78381b2c-b7c8-4d5e-a59c-046614b1bc4c__1_.webp",
+              "pricing": "Paid",
+              "easeOfUse": "Intermediate"
+            },
+            {
+              "id": "item-1741750268807",
+              "title": "New Item 2",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly"
+            },
+            {
+              "id": "item-1741750281317",
+              "title": "New Item 3",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly"
+            },
+            {
+              "id": "item-1741750291888",
+              "title": "New Item 4",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly"
+            },
+            {
+              "id": "item-1741750305220",
+              "title": "New Item 5",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [
+                "Share your pros/cons with us."
+              ],
+              "cons": [
+                "Share your pros/cons with us."
+              ],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly"
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741721407802",
+      "title": "Section 1 Test",
+      "categories": [
+        {
+          "id": "category-1741723909073",
+          "title": "New Category 4 ",
+          "count": 0,
+          "icon": "📁",
+          "items": [
+            {
+              "id": "item-1741723936933",
+              "title": "New Item 1",
+              "description": "test short description",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": []
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741722458943",
+          "title": "New Category 1",
+          "count": 0,
+          "icon": "🏅",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741724979824",
+      "title": "New Section 2",
+      "categories": [
+        {
+          "id": "category-1741725019934",
+          "title": "New Category 1",
+          "count": 0,
+          "icon": "😘",
+          "items": [
+            {
+              "id": "item-1741725034283",
+              "title": "New Item 1",
+              "description": "short descrition",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [],
+              "website": "aol.com",
+              "logo": "/uploads/1741725060583-4483a301-85d0-4f0c-aa62-6da85fc650cc.webp"
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741305570702",
+      "title": "Businesses",
+      "categories": [
+        {
+          "id": "category-1741723141627",
+          "title": "New Category 3",
+          "count": 0,
+          "icon": "😍",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741305709460",
+          "title": "Community Businesses",
+          "count": 0,
+          "icon": "🏅",
+          "items": [
+            {
+              "id": "item-1741418646183",
+              "title": "AI Course",
+              "description": "",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [
+                "Test your knoledge on 50 questions test"
+              ],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "aol.com",
+              "logo": "/uploads/1741418777041-4483a301-85d0-4f0c-aa62-6da85fc650cc.webp"
+            },
+            {
+              "id": "item-1741305777472",
+              "title": "New Item",
+              "description": "Liquid Currency",
+              "longDescription": [
+                "http://cryptoliquors.com/"
+              ],
+              "pros": [
+                "Crypto"
+              ],
+              "cons": [
+                "Don't overexpose"
+              ],
+              "useCases": [
+                "Connecting Liquor and Crypto"
+              ],
+              "website": "http://cryptoliquors.com/",
+              "logo": "/uploads/1741305939654-NavBar.png",
+              "pricing": "Paid",
+              "easeOfUse": "Beginner-Friendly"
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741418564871",
+          "title": "Courses & Certifications",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741728643828",
+      "title": "New Section",
+      "categories": []
+    },
+    {
+      "id": "section-1742443015511",
+      "title": "New Section 2",
+      "categories": []
+    }
+  ]
+}

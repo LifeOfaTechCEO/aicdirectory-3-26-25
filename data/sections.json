@@ -1,0 +1,35 @@
+{
+  "sections": [
+    {
+      "id": "test-section",
+      "title": "Test Section",
+      "categories": [
+        {
+          "id": "test-category",
+          "title": "Test Category",
+          "icon": "????",
+          "items": [
+            {
+              "id": "test-item",
+              "name": "Test Item",
+              "description": "Updated description",
+              "longDescription": "A longer description of the test item",
+              "useCases": "Test use cases",
+              "pros": [
+                "Pro 1",
+                "Pro 2"
+              ],
+              "cons": [
+                "Con 1",
+                "Con 2"
+              ],
+              "pricingTier": "Free",
+              "easeOfUse": "Easy",
+              "website": "https://example.com"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

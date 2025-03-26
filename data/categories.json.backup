@@ -1,0 +1,256 @@
+{
+  "sections": [
+    {
+      "id": "section-1741735013086",
+      "title": "New Section",
+      "categories": [
+        {
+          "id": "category-1741735013086",
+          "title": "Default Category",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741735028067",
+          "title": "New Category",
+          "count": 0,
+          "icon": "📁",
+          "items": [
+            {
+              "id": "item-1741735040845",
+              "title": "New Item",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741725004393",
+      "title": "New Section 4",
+      "categories": [
+        {
+          "id": "category-1741726008333",
+          "title": "New Category 1",
+          "count": 0,
+          "icon": "📁",
+          "items": [
+            {
+              "id": "item-1741726015546",
+              "title": "New Item 1",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741734505810",
+          "title": "New Category",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741721407802",
+      "title": "Section 1 Test",
+      "categories": [
+        {
+          "id": "category-1741723909073",
+          "title": "New Category 4",
+          "count": 0,
+          "icon": "📁",
+          "items": [
+            {
+              "id": "item-1741723936933",
+              "title": "New Item 1",
+              "description": "test short description",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741722458943",
+          "title": "New Category 1",
+          "count": 0,
+          "icon": "🏅",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741724979824",
+      "title": "New Section 2",
+      "categories": [
+        {
+          "id": "category-1741725019934",
+          "title": "New Category 1",
+          "count": 0,
+          "icon": "😘",
+          "items": [
+            {
+              "id": "item-1741725034283",
+              "title": "New Item 1",
+              "description": "short descrition",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "aol.com",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741736347525",
+          "title": "New Category",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    },
+    {
+      "id": "section-1741305570702",
+      "title": "Businesses",
+      "categories": [
+        {
+          "id": "category-1741723141627",
+          "title": "New Category 3",
+          "count": 0,
+          "icon": "😍",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741305709460",
+          "title": "Community Businesses",
+          "count": 0,
+          "icon": "🏅",
+          "items": [
+            {
+              "id": "item-1741418646183",
+              "title": "AI Course",
+              "description": "",
+              "type": "tool",
+              "longDescription": [],
+              "pros": [],
+              "cons": [],
+              "useCases": [
+                "Test your knoledge on 50 questions test"
+              ],
+              "pricing": "Free",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "aol.com",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            },
+            {
+              "id": "item-1741305777472",
+              "title": "New Item",
+              "description": "Liquid Currency",
+              "type": "tool",
+              "longDescription": [
+                "http://cryptoliquors.com/"
+              ],
+              "pros": [
+                "Crypto"
+              ],
+              "cons": [
+                "Don't overexpose"
+              ],
+              "useCases": [
+                "Connecting Liquor and Crypto"
+              ],
+              "pricing": "Paid",
+              "easeOfUse": "Beginner-Friendly",
+              "website": "http://cryptoliquors.com/",
+              "stats": {
+                "views": "0",
+                "upvotes": "0",
+                "saves": "0"
+              }
+            }
+          ],
+          "defaultPros": [],
+          "defaultCons": []
+        },
+        {
+          "id": "category-1741418564871",
+          "title": "Courses & Certifications",
+          "count": 0,
+          "icon": "📁",
+          "items": [],
+          "defaultPros": [],
+          "defaultCons": []
+        }
+      ]
+    }
+  ]
+}

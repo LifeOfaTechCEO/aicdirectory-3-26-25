@@ -1,0 +1,139 @@
+.container {
+  min-height: 100vh;
+  background: #13111C;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #ffffff 0%, #a8a8a8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.date {
+  text-align: center;
+  color: #a8a8a8;
+  margin-bottom: 3rem;
+  font-size: 0.9rem;
+}
+
+.content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.intro {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a8a8a8;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.content section {
+  margin-bottom: 2rem;
+}
+
+.content section:last-child {
+  margin-bottom: 0;
+}
+
+.content h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #a8a8a8;
+  margin-bottom: 1rem;
+}
+
+.content ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  color: #a8a8a8;
+}
+
+.content li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.content a {
+  color: #FF6B6B;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.content a:hover {
+  color: #FF8E53;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.backLink {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E53 100%);
+  border-radius: 8px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.backLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.2);
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .date {
+    margin-bottom: 2rem;
+  }
+  
+  .content {
+    padding: 1.5rem;
+  }
+  
+  .content h2 {
+    font-size: 1.1rem;
+  }
+  
+  .content p,
+  .content li {
+    font-size: 0.9rem;
+  }
+} 

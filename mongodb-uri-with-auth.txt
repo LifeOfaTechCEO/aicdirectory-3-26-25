@@ -1,0 +1,1 @@
+mongodb+srv://aicdadmin2:A9t23YN2ExiwMPkY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority&authSource=admin 
