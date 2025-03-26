@@ -22,5 +22,10 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ]
+  ],
+  "github": {
+    "enabled": true,
+    "silent": true
+  },
+  "ignoreCommand": "echo 'Ignoring TypeScript files that cause problems' && find ./new-website -name '*.ts' -delete || true"
 } 

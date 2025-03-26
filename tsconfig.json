@@ -14,14 +14,15 @@
     "incremental": true,
     "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "typeRoots": ["./node_modules/@types", "./node_modules/tailwindcss/types"]
   },
   "include": [
     "next-env.d.ts",
@@ -30,6 +31,6 @@
   ],
   "exclude": [
     "node_modules",
-    "new-website"
+    "new-website/**/*"
   ]
 }
