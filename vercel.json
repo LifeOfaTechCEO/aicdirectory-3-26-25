@@ -4,17 +4,10 @@
   "installCommand": "npm install",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "env": {
-    "MONGODB_URI": "mongodb+srv://aicdadmin2:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority",
-    "JWT_SECRET": "aicdjwtsecret2024"
-  },
   "builds": [
     {
       "src": "package.json",
-      "use": "@vercel/next",
-      "config": {
-        "skipTypeCheck": true
-      }
+      "use": "@vercel/next"
     }
   ],
   "routes": [
@@ -28,5 +21,5 @@
     "silent": true,
     "autoAlias": true
   },
-  "ignoreCommand": "echo 'Ignoring TypeScript files that cause problems' && find ./new-website -name '*.ts' -delete || true"
+  "ignoreCommand": "echo 'Removing problematic files' && rm -rf new-website || true"
 } 
