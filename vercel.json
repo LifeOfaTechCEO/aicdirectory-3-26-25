@@ -4,22 +4,8 @@
   "installCommand": "npm install",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "github": {
     "enabled": true,
-    "silent": true,
-    "autoAlias": true
-  },
-  "ignoreCommand": "echo 'Removing problematic files' && rm -rf new-website || true"
+    "silent": true
+  }
 } 
