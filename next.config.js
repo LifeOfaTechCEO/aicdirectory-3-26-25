@@ -44,7 +44,11 @@ const nextConfig = {
     ignoreDuringBuilds: true
   },
   // Skip type checking during build
-  transpilePackages: ['tailwindcss']
+  transpilePackages: ['tailwindcss'],
+  env: {
+    MONGODB_URI: "mongodb+srv://aicdadmin2:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd",
+    JWT_SECRET: "aicdjwtsecret2024"
+  }
 };
 
 module.exports = nextConfig; 
