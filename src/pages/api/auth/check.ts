@@ -1,35 +1,29 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { verify } from 'jsonwebtoken';
-import { env } from '@/lib/env';
-import type { AdminJwtPayload } from '@/types/auth';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const token = req.cookies.admin_token;
+  const token = req.cookies.token;
 
   if (!token) {
     return res.status(401).json({ authenticated: false });
   }
 
   try {
-    const decoded = verify(token, env.JWT_SECRET) as AdminJwtPayload;
-    
-    // Check if token is expired
-    if (decoded.exp && decoded.exp < Date.now() / 1000) {
-      return res.status(401).json({ authenticated: false });
-    }
+    const { jwtVerify } = await import('jose');
+    const secret = new TextEncoder().encode(process.env.JWT_SECRET);
+    const { payload } = await jwtVerify(token, secret);
 
-    return res.status(200).json({ 
+    return res.status(200).json({
       authenticated: true,
       user: {
-        username: decoded.username,
-        role: decoded.role
-      }
+        username: payload.username,
+      },
     });
   } catch (error) {
+    console.error('Token verification error:', error);
     return res.status(401).json({ authenticated: false });
   }
 } 

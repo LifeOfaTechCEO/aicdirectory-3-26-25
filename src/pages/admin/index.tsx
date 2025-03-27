@@ -1,32 +1,39 @@
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
-export default function Admin() {
+export default function AdminDashboard() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch('/api/auth/check');
-      if (!response.ok) {
+        const response = await fetch('/api/auth/check', {
+          credentials: 'include',
+        });
+        const data = await response.json();
+
+        if (!data.authenticated) {
           router.push('/admin/login');
-        } else {
-          setLoading(false);
         }
-    } catch (error) {
+      } catch (error) {
         console.error('Auth check failed:', error);
-    router.push('/admin/login');
+        router.push('/admin/login');
+      } finally {
+        setLoading(false);
       }
     };
+
     checkAuth();
   }, [router]);
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50">
-        <div className="text-xl font-semibold">Loading...</div>
+      <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="text-xl font-semibold">Loading...</h2>
+        </div>
       </div>
     );
   }
@@ -34,15 +41,23 @@ export default function Admin() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Head>
-        <title>Admin Dashboard</title>
+        <title>Admin Dashboard - AI Directory</title>
       </Head>
 
-      <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-        <div className="px-4 py-6 sm:px-0">
-          <h1 className="text-3xl font-bold text-gray-900">Admin Dashboard</h1>
-          <p className="mt-4 text-gray-600">Welcome to the admin dashboard.</p>
-        </div>
-        </div>
+      <div className="py-10">
+        <header>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 className="text-3xl font-bold leading-tight text-gray-900">
+              Admin Dashboard
+            </h1>
+          </div>
+        </header>
+        <main>
+          <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            {/* Add your admin dashboard content here */}
+          </div>
+        </main>
+      </div>
     </div>
   );
 }
