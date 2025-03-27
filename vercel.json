@@ -5,7 +5,7 @@
   "outputDirectory": ".next",
   "framework": "nextjs",
   "env": {
-    "MONGODB_URI": "mongodb+srv://aicdadmin:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority",
+    "MONGODB_URI": "mongodb+srv://aicdadmin2:A9t23YN2Ex1wMPKY@cluster0.vdmop.mongodb.net/aicd?retryWrites=true&w=majority",
     "JWT_SECRET": "aicdjwtsecret2024"
   },
   "builds": [
