@@ -35,7 +35,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .sign(secret);
 
     const isProduction = process.env.NODE_ENV === 'production';
-    const domain = isProduction ? 'techceos-projects.vercel.app' : 'localhost';
 
     res.setHeader(
       'Set-Cookie',
@@ -44,7 +43,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         secure: isProduction,
         sameSite: isProduction ? 'none' : 'lax',
         path: '/',
-        domain: isProduction ? domain : undefined,
         maxAge: 86400 // 24 hours
       })
     );
