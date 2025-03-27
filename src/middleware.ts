@@ -2,8 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export async function middleware(request: NextRequest) {
-  const token = request.cookies.get('token')?.value;
-
   // Allow public routes
   if (
     request.nextUrl.pathname === '/' ||
@@ -18,20 +16,23 @@ export async function middleware(request: NextRequest) {
   }
 
   // Handle admin routes
-  if (request.nextUrl.pathname.startsWith('/admin') && !token) {
-    if (request.nextUrl.pathname !== '/admin/login') {
-      return NextResponse.redirect(new URL('/admin/login', request.url));
+  if (request.nextUrl.pathname.startsWith('/admin')) {
+    if (request.nextUrl.pathname === '/admin/login') {
+      return NextResponse.next();
     }
-    return NextResponse.next();
+    return NextResponse.redirect(new URL('/admin/login', request.url));
   }
 
   // Handle API routes
-  if (request.nextUrl.pathname.startsWith('/api') && !token) {
+  const authHeader = request.headers.get('authorization');
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return new NextResponse(
       JSON.stringify({ success: false, message: 'Authentication required' }),
       { status: 401, headers: { 'content-type': 'application/json' } }
     );
   }
+
+  const token = authHeader.split(' ')[1];
 
   try {
     const { jwtVerify } = await import('jose');
@@ -39,9 +40,6 @@ export async function middleware(request: NextRequest) {
     await jwtVerify(token, secret);
     return NextResponse.next();
   } catch (error) {
-    if (request.nextUrl.pathname.startsWith('/admin')) {
-      return NextResponse.redirect(new URL('/admin/login', request.url));
-    }
     return new NextResponse(
       JSON.stringify({ success: false, message: 'Invalid token' }),
       { status: 401, headers: { 'content-type': 'application/json' } }

@@ -5,11 +5,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
-  const token = req.cookies.token;
-
-  if (!token) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader || !authHeader.startsWith('Bearer ')) {
     return res.status(401).json({ authenticated: false });
   }
+
+  const token = authHeader.split(' ')[1];
 
   try {
     const { jwtVerify } = await import('jose');

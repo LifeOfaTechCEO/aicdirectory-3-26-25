@@ -9,16 +9,26 @@ export default function AdminDashboard() {
   useEffect(() => {
     const checkAuth = async () => {
       try {
+        const token = localStorage.getItem('token');
+        if (!token) {
+          router.push('/admin/login');
+          return;
+        }
+
         const response = await fetch('/api/auth/check', {
-          credentials: 'include',
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         });
         const data = await response.json();
 
         if (!data.authenticated) {
+          localStorage.removeItem('token');
           router.push('/admin/login');
         }
       } catch (error) {
         console.error('Auth check failed:', error);
+        localStorage.removeItem('token');
         router.push('/admin/login');
       } finally {
         setLoading(false);

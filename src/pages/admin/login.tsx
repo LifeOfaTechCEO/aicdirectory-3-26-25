@@ -21,7 +21,6 @@ export default function Login() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ username, password }),
-        credentials: 'include',
       });
 
       const data = await response.json();
@@ -30,6 +29,7 @@ export default function Login() {
         throw new Error(data.message || 'Login failed');
       }
 
+      localStorage.setItem('token', data.token);
       router.push('/admin');
     } catch (error: any) {
       console.error('Login error:', error);
