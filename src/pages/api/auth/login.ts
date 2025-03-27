@@ -35,7 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .sign(secret);
 
     const isProduction = process.env.NODE_ENV === 'production';
-    const domain = isProduction ? '.vercel.app' : 'localhost';
+    const domain = isProduction ? 'techceos-projects.vercel.app' : 'localhost';
 
     res.setHeader(
       'Set-Cookie',
