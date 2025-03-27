@@ -1,6 +1,19 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Credentials', 'true');
+  res.setHeader('Access-Control-Allow-Origin', req.headers.origin || '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT');
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
+  );
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
   }
@@ -21,13 +34,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .setExpirationTime('24h')
       .sign(secret);
 
+    const isProduction = process.env.NODE_ENV === 'production';
+    const domain = isProduction ? '.vercel.app' : 'localhost';
+
     res.setHeader(
       'Set-Cookie',
       serialize('token', token, {
         httpOnly: true,
-        secure: process.env.NODE_ENV === 'production',
-        sameSite: 'strict',
+        secure: isProduction,
+        sameSite: isProduction ? 'none' : 'lax',
         path: '/',
+        domain: isProduction ? domain : undefined,
         maxAge: 86400 // 24 hours
       })
     );
