@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 
@@ -8,14 +8,6 @@ export default function Login() {
   const [password, setPassword] = useState('');
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    // Check if already logged in
-    const token = sessionStorage.getItem('adminToken');
-    if (token) {
-      router.push('/admin');
-    }
-  }, [router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,6 +21,7 @@ export default function Login() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ username, password }),
+        credentials: 'include',
       });
 
       const data = await response.json();
@@ -37,8 +30,6 @@ export default function Login() {
         throw new Error(data.message || 'Login failed');
       }
 
-      // Store token in session storage instead of localStorage
-      sessionStorage.setItem('adminToken', data.token);
       router.push('/admin');
     } catch (error: any) {
       console.error('Login error:', error);
